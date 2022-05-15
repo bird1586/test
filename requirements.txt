@@ -1,0 +1,3 @@
+docxtpl 
+requests
+python-docx
