@@ -13,7 +13,7 @@ from docx import Document
 from glob import glob 
 
 
-@st.cache
+
 def get_template():
     url = 'https://github.com/bird1586/test/raw/main/template.docx'
     r = requests.get(url, stream=True)
@@ -77,7 +77,7 @@ if uploaded_file is not None:
     combine_word_documents(files)
     
     st.download_button(
-         label="Download {} docx",
+         label="Download {} docx".format(len(df)),
          data=open("merged.docx", "rb"),
          file_name='merged.docx',
          mime='application/vnd.openxmlformats-officedocument.wordprocessingml.document',
